@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://player.gd" type="Script" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+custom_aabb = AABB( 0, 100, 0, 0, 0, 0 )
+
+[sub_resource type="CylinderShape" id=2]
+
+[node name="snake" type="KinematicBody"]
+script = ExtResource( 2 )
+
+[node name="body" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
