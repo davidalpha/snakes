@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://segment.gd" type="Script" id=1]
+
+[sub_resource type="SphereMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=2]
+params_diffuse_mode = 4
+params_specular_mode = 3
+albedo_color = Color( 1, 0.866667, 0, 1 )
+metallic = 0.8
+metallic_specular = 0.8
+roughness = 0.22
+
+[node name="segment" type="MeshInstance"]
+mesh = SubResource( 3 )
+material/0 = SubResource( 2 )
+script = ExtResource( 1 )
